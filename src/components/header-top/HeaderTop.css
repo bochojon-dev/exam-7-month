@@ -1,0 +1,85 @@
+.top_contents {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 24px 0 16px;
+  font-family: Nova, sans-serif !important;
+}
+.header_top {
+  background: #fff;
+}
+.header_top button {
+  background: inherit;
+}
+.top_icons {
+  display: flex;
+  align-items: center;
+  gap: 36px;
+}
+.top_icons span {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.options {
+  display: flex;
+  gap: 12px;
+}
+.options select {
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 24.36px;
+  color: #262626;
+}
+.top_icons h4,
+.top_icons p {
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 24.36px;
+  color: #262626;
+}
+.top_icons span p {
+  opacity: 0.5;
+}
+.top_icon sup {
+  position: absolute;
+  width: 15px;
+  height: 14px;
+  border-radius: 100%;
+  background: #fb7181;
+  color: #fff;
+  padding: 2px 4px;
+  font-size: 10px;
+  font-weight: 700;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: -6px;
+  right: -3px;
+}
+.top_icon {
+  position: relative;
+}
+.wishlist_count {
+  right: 17px;
+}
+@media (max-width: 600px) {
+  .top_icons p,
+  .top_icons h4 {
+    display: none;
+  }
+  .top_contents {
+    padding: 16px 0 12px;
+  }
+}
+@media (max-width: 440px) {
+  .top_icons {
+    gap: 12px !important;
+  }
+  .top_icons img {
+    width: 16px !important;
+  }
+  .options select {
+    font-size: 16px !important;
+  }
+}

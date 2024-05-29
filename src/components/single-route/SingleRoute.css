@@ -1,0 +1,349 @@
+.single_contents {
+  display: grid;
+  grid-template-columns: 1fr 300px;
+}
+
+/* MEDIA */
+@media (max-width: 1150px) {
+  .single_contents {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .bside {
+    width: 400px;
+    padding-top: 32px;
+  }
+  .info_title {
+    gap: 48px;
+  }
+  .product_contents ul {
+    padding-top: 60px !important;
+  }
+}
+/*        MEDIAN END HERE ///////////////////           */
+
+.info_title {
+  display: flex;
+  gap: 70px;
+  padding: 32px 0 0 32px;
+  height: 85px;
+}
+.info_title h3 {
+  padding-bottom: 32px;
+  cursor: pointer;
+  font-family: Poppins;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 27px;
+  text-align: left;
+  transition: 0.1s linear;
+}
+.counter button:disabled {
+  opacity: 0.3;
+  cursor: no-drop;
+}
+.counter button {
+  font-size: 24px !important;
+}
+.info_title h3 span {
+  font-family: Nova;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 19.49px;
+  text-align: left;
+  opacity: 0.25;
+  color: #262626;
+  padding-left: 4px;
+}
+.info_title h3:active,
+.info_title h3:hover {
+  color: #2e90e5;
+  border-bottom: 3px solid #2e90e5;
+}
+.info_title {
+  display: flex;
+  border-bottom: 2px solid #e5e8ea;
+}
+.information {
+  width: 100%;
+  background: #fafafb;
+  border-radius: 8px;
+}
+.bside h2 {
+  font-family: Nova;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 21.92px;
+  text-align: left;
+  color: #c1c8ce;
+  padding-bottom: 32px;
+}
+.info_texts {
+  padding: 20px 0 44px 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  max-width: 780px;
+  width: 100%;
+}
+.info_texts p {
+  font-family: Poppins;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 21.6px;
+  letter-spacing: 0.5px;
+  text-align: left;
+  color: #9098b1;
+}
+.img {
+  width: 100%;
+  background-size: contain;
+  padding-bottom: 110px;
+}
+.others {
+  display: flex;
+  gap: 16px;
+}
+.others img {
+  padding: 8px;
+  border: 2px solid #006cff;
+}
+.others img:active,
+.others img:hover {
+  transform: scale(1.08);
+  cursor: pointer;
+}
+.aside {
+  display: flex;
+  gap: 32px;
+}
+.ratings {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 22px 0 18px;
+}
+.product_name {
+  font-family: Poppins;
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 36px;
+  color: #22262a;
+}
+.costs {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  font-family: Poppins;
+  letter-spacing: 0.5px;
+  padding: 24px 0 16px;
+}
+.costs h4 {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 36px;
+  color: #40bfff;
+}
+.acces {
+  padding-bottom: 22px;
+  display: flex;
+  gap: 50px;
+}
+.sizes {
+  padding: 22px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.counter {
+  background: #f6f7f8;
+  padding: 12px 20px;
+  font-family: Nova;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 19.49px;
+  text-align: left;
+  color: #262626;
+  gap: 24px;
+  border-radius: 6px;
+}
+.wish_cart {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+.wish_cart button {
+  background: #ebf6ff !important;
+  opacity: 1 !important;
+  padding: 16px 20px;
+  color: #33a0ff !important;
+  border-radius: 6px;
+}
+.counter button {
+  color: #33a0ff !important;
+  background: inherit !important;
+  padding-bottom: 2px;
+  font-size: 20px;
+  font-weight: 500;
+}
+.aside_carts {
+  padding: 20px 0;
+}
+.counter button:first-child {
+  padding-bottom: 4px;
+}
+.size select {
+  border-radius: 4px;
+  padding-left: 4px !important;
+}
+.acces ul {
+  flex-direction: column;
+  gap: 16px;
+}
+.sizes {
+  padding: 22px 0;
+}
+.wish_cart button {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+.costs p span {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 21px;
+  color: #9098b1;
+  text-decoration: line-through;
+  padding-right: 12px;
+}
+.costs p {
+  color: #fb7181;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 21px;
+}
+.share button {
+  padding: 12px 32px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  justify-content: center;
+  color: #fff !important;
+  border-radius: 6px;
+  font-family: Poppins;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  text-align: left;
+  background: #03a9f4;
+  transition: 0.2s linear;
+}
+.wish_cart-img {
+  width: 18px;
+  height: 18px;
+}
+.share button:hover {
+  background: #385c8e !important;
+}
+
+.share button:nth-child(2) img {
+  width: 18px;
+}
+.ratings p {
+  font-family: Nova;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 19.49px;
+  text-align: left;
+  color: #c1c8ce;
+}
+.ratings p:nth-child(2) {
+  color: #33a0ff;
+}
+.desc {
+  max-width: 550px;
+  width: 100%;
+}
+.aside_title {
+  width: 100%;
+  border-bottom: 2px solid #f6f7f8;
+}
+.size {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+.size select {
+  margin-left: 56px;
+  padding: 10px 56px 10px 10px;
+  border: 2px solid #f1f3f4;
+  outline: none;
+}
+.bside {
+  display: block;
+}
+.single_contents {
+  padding-top: 16px;
+}
+.mySwiper {
+  display: flex !important;
+  flex-direction: column;
+}
+.swipe {
+  border: 3px solid #f6f7f8;
+  padding-bottom: 36px;
+  border-radius: 6px;
+  text-align: center;
+  margin-bottom: 32px;
+}
+.swipe img:first-child {
+  padding-bottom: 48px;
+}
+.swipe p {
+  padding-top: 12px;
+  font-family: Nova;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 19.49px;
+  color: #ff4858;
+}
+.share {
+  display: grid !important;
+  gap: 12px;
+  padding: 20px 0 48px;
+  grid-template-columns: 1fr 1fr;
+  width: 100%;
+}
+.swipe p span {
+  padding-left: 12px;
+  color: #c1c8ce;
+  text-decoration: line-through;
+}
+.swiper-pagination {
+  transform: scale(1.5) !important;
+}
+.swiper-pagination-clickable .swiper-pagination-bullet {
+  width: 24px;
+  height: 3px;
+  border-radius: 3px;
+  background: #bcddfe;
+}
+.swipe img {
+  width: 100%;
+  background-size: contain;
+}
+.aside_carts {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.counter {
+  display: flex;
+  align-items: center;
+}
+.share {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}

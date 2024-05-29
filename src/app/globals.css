@@ -1,0 +1,45 @@
+@font-face {
+  font-family: Nova;
+  src: url(../fonts/Mark\ Simonson\ \ Proxima\ Nova\ Regular.otf);
+}
+@font-face {
+  font-family: Poppins;
+  src: url(../fonts/Poppins-Regular.ttf);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.container {
+  margin: 0 auto;
+  padding: 0 18px;
+  max-width: 1332px;
+}
+button {
+  border: 0;
+  background: #40bfff;
+  color: #fff;
+  cursor: pointer;
+  transition: 0.1s linear;
+}
+button:hover {
+  opacity: 0.85;
+}
+button:active {
+  transform: scale(0.95);
+}
+select {
+  border: 0;
+}
+input {
+  outline: none;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+ul {
+  list-style-type: none;
+  display: flex;
+}

@@ -1,0 +1,54 @@
+.register {
+  max-width: 520px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  padding: 100px 0 160px;
+  justify-content: center;
+  margin: 0 auto;
+}
+.register input {
+  width: 100%;
+  padding: 26px;
+  border: 1px solid #969393;
+}
+.user input:focus {
+  border: 1px solid #33a0ff;
+  box-shadow: 1px 3px 3px 0px #00000003;
+}
+.user_submit {
+  width: 100%;
+  padding: 22px 0;
+  margin: 24px 0;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 32.74px;
+  letter-spacing: -0.02em;
+  text-align: center;
+  box-shadow: 0px 10px 40px 0px #f8a17033;
+  border-radius: 12px;
+}
+.user {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  color: #373737;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 16.44px;
+  text-align: left;
+}
+@media (max-width: 780px) {
+  .register {
+    padding: 40px 0 60px !important;
+    gap: 24px !important;
+  }
+  .register input {
+    padding: 16px !important;
+  }
+  .register button {
+    padding: 16px !important;
+    margin-top: 8px !important;
+  }
+}

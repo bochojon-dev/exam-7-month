@@ -1,0 +1,54 @@
+.adidas_contents {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-family: Poppins;
+  color: #fff;
+}
+.adidas {
+  background: #40bfff;
+}
+.adidas_texts h3 {
+  font-size: 55px;
+  font-weight: 500;
+  line-height: 82.5px;
+  text-align: left;
+  width: 570px;
+}
+.adidas_texts p {
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 36px;
+  text-align: left;
+  padding: 24px 0 12px;
+  width: 600px;
+}
+.adidas_texts h4 {
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 30px;
+  text-align: left;
+}
+.shop_now {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  align-items: start;
+  justify-content: start;
+}
+.adidas_contents .adidas_image {
+  width: 700px !important;
+}
+@media (max-width: 1280px) {
+  .adidas_contents {
+    padding-top: 60px;
+    flex-wrap: wrap;
+    justify-content: center !important;
+    gap: 44px !important;
+  }
+}
+@media (max-width: 700px) {
+  .adidas_contents .adidas_image {
+    width: 520px !important;
+  }
+}

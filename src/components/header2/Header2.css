@@ -1,0 +1,26 @@
+.header2_contents {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  justify-content: center;
+}
+.header2_contents p {
+  font-family: Nova;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 21.92px;
+  text-align: left;
+  color: #262626;
+}
+.header2 {
+  background: #f6f7f8;
+  padding: 14px;
+}
+.home {
+  color: #33a0ff !important;
+}
+.header2_contents span {
+  font-size: 14px;
+  line-height: 20px;
+  color: #c1c8ce;
+}

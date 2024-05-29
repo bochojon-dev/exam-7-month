@@ -1,0 +1,24 @@
+.header1_contents {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  justify-content: center;
+  padding: 14px;
+  font-family: Nova;
+}
+.header1 {
+  background: #f6f7f8;
+}
+.header1 p {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 21.92px;
+  color: #33a0ff;
+}
+.last {
+  color: #262626 !important;
+}
+.header1 span {
+  color: #c1c8ce;
+  font-size: 14px;
+}

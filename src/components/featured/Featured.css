@@ -1,0 +1,95 @@
+.featured_contents {
+  text-align: center;
+}
+.featured_cards {
+  padding: 70px 0 100px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.featured_card {
+  font-family: Poppins;
+  display: flex;
+  align-items: start !important;
+  gap: 24px;
+  padding: 12px 16px;
+  border-radius: 16px;
+  transition: 0.2s linear;
+  align-items: center;
+  text-align: left !important;
+}
+.featured_card:hover {
+  box-shadow: 4px 4px 8cap #ddd;
+}
+.feature_text h3 {
+  padding-bottom: 12px;
+  font-family: Nova;
+  font-size: 22px;
+  font-weight: 400;
+  line-height: 26.8px;
+  color: #262626;
+  width: 240px;
+}
+.feature_text p {
+  padding-top: 12px;
+  font-family: Poppins;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 30px;
+  text-align: left;
+  color: #ff4858;
+}
+.feature_text p span {
+  font-family: Nova;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 24.36px;
+  color: #c1c8ce;
+}
+.form {
+  max-width: 640px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 90px;
+  position: relative;
+  border-radius: 6px;
+  overflow: hidden;
+}
+.form button {
+  font-family: Poppins;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 30px;
+  padding: 16.5px 27.5px;
+  position: absolute;
+  right: 0;
+  top: -1px;
+}
+.featured_contents input {
+  padding: 21px;
+  flex: 1;
+  border-radius: 6px;
+  border: 2px solid #bcddfe;
+}
+.featured_contents input::placeholder {
+  font-family: Nova;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 21.92px;
+  color: #262626;
+  opacity: 0.35;
+}
+@media (max-width: 13340px) {
+  .featured_cards {
+    flex-wrap: wrap;
+    justify-content: center !important;
+    gap: 32px !important;
+  }
+}
+@media (max-width: 960px) {
+  .featured_cards {
+    padding: 30px 0 48px !important;
+  }
+}
