@@ -12,7 +12,6 @@ const Products = ({ data, title }) => {
   const [selectedCategory, setSelectedCategory] = useState("All");
   const categories = ["All", "Bags", "Sneakers", "Belt", "Sunglasses"];
   let dispatch = useDispatch();
-
   let wishes = useSelector((s) => s.wishes.value);
   const categoryList = categories.map((category, inx) => (
     <li
@@ -41,7 +40,10 @@ const Products = ({ data, title }) => {
       />
       <div className="pro_icons">
         <div className="pro_icon">
-          <button onClick={() => dispatch(toogleLike(product))}>
+          <button
+            className="wishlist"
+            onClick={() => dispatch(toogleLike(product))}
+          >
             {wishes?.some((el) => el.id === product.id) ? (
               <IoHeartOutline style={{ color: "red" }} />
             ) : (

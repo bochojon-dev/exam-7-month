@@ -33,6 +33,9 @@
   line-height: 30px;
   padding: 32px 0 40px;
 }
+.wishlist {
+  padding: 0 !important;
+}
 .btn {
   font-family: Nova;
   font-size: 18px;
