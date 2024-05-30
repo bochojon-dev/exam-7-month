@@ -3,16 +3,20 @@ import React, { useState } from "react";
 import "../products/Products.css";
 import Image from "next/image";
 import rate from "@/assets/rate.svg";
-import { IoHeartOutline, IoCartOutline } from "react-icons/io5";
+import { FaHeart, FaRegHeart } from "react-icons/fa";
+import { BsCart3, BsCartCheckFill } from "react-icons/bs";
 import Link from "next/link";
 import { useDispatch, useSelector } from "react-redux";
 import { toogleLike } from "@/lib/slice/wishlistSlice";
+import { addToCart } from "@/lib/slice/cartSlice";
+import { incrementItem } from "@/lib/slice/loadMore";
 
-const Products = ({ data, title }) => {
+const Products = ({ data, title, btn }) => {
   const [selectedCategory, setSelectedCategory] = useState("All");
   const categories = ["All", "Bags", "Sneakers", "Belt", "Sunglasses"];
   let dispatch = useDispatch();
   let wishes = useSelector((s) => s.wishes.value);
+  let products = useSelector((s) => s.cart.value);
   const categoryList = categories.map((category, inx) => (
     <li
       key={inx}
@@ -45,14 +49,29 @@ const Products = ({ data, title }) => {
             onClick={() => dispatch(toogleLike(product))}
           >
             {wishes?.some((el) => el.id === product.id) ? (
-              <IoHeartOutline style={{ color: "red" }} />
+              <FaHeart style={{ color: "red" }} />
             ) : (
-              <IoHeartOutline />
+              <FaRegHeart />
             )}
           </button>
         </div>
         <div className="pro_icon">
-          <IoCartOutline />
+          <button
+            className="wishlist"
+            onClick={() => {
+              dispatch(addToCart(product));
+
+              if (products?.findIndex((el) => el.id == product.id) < 0) {
+                // return toast.success("Added to Cart ");
+              }
+            }}
+          >
+            {products?.some((el) => el.id === product.id) ? (
+              <BsCartCheckFill />
+            ) : (
+              <BsCart3 />
+            )}
+          </button>
         </div>
       </div>
       <Link href={`/single/${product.id}`}>
@@ -74,9 +93,25 @@ const Products = ({ data, title }) => {
       <div className="container">
         <div className="product_contents">
           <h2>{title}</h2>
-          <ul>{categoryList}</ul>
+          <ul className="categories">{categoryList}</ul>
           <div className="product_cards">{productCards}</div>
-          <button>LOAD MORE</button>
+
+          {!btn ? (
+            <div className="btn">
+              <button
+                // disabled={loading}
+                onClick={() => dispatch(incrementItem())}
+                className="see__more"
+              >
+                Load More
+                {/* {loading ? "Loading..." : " See More"} */}
+              </button>
+            </div>
+          ) : (
+            <>
+              <button>load more</button>
+            </>
+          )}
         </div>
       </div>
     </div>

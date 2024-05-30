@@ -33,6 +33,11 @@
   line-height: 30px;
   padding: 32px 0 40px;
 }
+.categories {
+  overflow: hidden;
+  overflow-x: auto;
+  display: none;
+}
 .wishlist {
   padding: 0 !important;
 }
@@ -57,12 +62,14 @@
   display: block !important;
 }
 .product_cards {
+  padding-top: 24px;
   position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 24px;
   flex-wrap: wrap;
+  padding-bottom: 44px;
 }
 .pro_icons {
   display: flex;
@@ -73,7 +80,7 @@
   position: absolute;
   top: 0;
   width: 100%;
-  height: 270px;
+  height: 280px;
   opacity: 0;
   background: #fff;
   transition: all 0.3s ease-out;

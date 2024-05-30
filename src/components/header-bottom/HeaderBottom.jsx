@@ -1,44 +1,3 @@
-// "use client";
-// import React, { useState } from "react";
-// import "../header-bottom/HeaderBottom.css";
-// import logo from "@/assets/logo.svg";
-// import Image from "next/image";
-// import Link from "next/link";
-
-// const HeaderBottom = () => {
-//   let [shrink, setShrink] = useState(false);
-//   window.addEventListener("scroll", () => {
-//     if (window.scrollY >= 50) {
-//       setShrink(true);
-//     } else {
-//       setShrink(false);
-//     }
-//   });
-//   let pages = ["HOME", "BAGS", "SNEAKERS", "BELT", "CONTACT"];
-//   let page = pages?.map((el, inx) => (
-//     <li className="nav_items" key={inx}>
-//       {el}
-//     </li>
-//   ));
-//   return (
-//     <div className={`header_bottom ${shrink ? "shrink" : ""}`}>
-//       <div className="container">
-//         <div className="bottom_contents">
-//           <Link href={"/"}>
-//             <div className="logo">
-//               <Image alt="logo" width={44} height={44} src={logo} />
-//               <h4>E-Comm</h4>
-//             </div>
-//           </Link>
-//           <ul>{page}</ul>
-//         </div>
-//       </div>
-//     </div>
-//   );
-// };
-
-// export default HeaderBottom;
-
 "use client";
 import React, { useState, useEffect } from "react";
 import "../header-bottom/HeaderBottom.css";
@@ -48,8 +7,8 @@ import Link from "next/link";
 import { IoMenu } from "react-icons/io5";
 
 const HeaderBottom = () => {
-  const [shrink, setShrink] = useState(false);
   const [toggle, setToggle] = useState(false);
+  const [shrink, setShrink] = useState(false);
   useEffect(() => {
     const handleScroll = () => {
       if (window.scrollY >= 50) {
@@ -61,7 +20,6 @@ const HeaderBottom = () => {
 
     window.addEventListener("scroll", handleScroll);
 
-    // Cleanup function to remove the event listener
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
@@ -80,25 +38,15 @@ const HeaderBottom = () => {
       link: "/contact",
     },
     {
-      id: 3,
-      title: "LOGIN",
-      link: "/login",
+      id:3,
+      title:"ABOUT",
+      link:'/about'
     },
     {
       id: 4,
-      title: "ADMIN",
-      link: "/admin",
+      title: "LOGIN",
+      link: "/login",
     },
-    // {
-    //   id: 5,
-    //   title: "HOME",
-    //   link: "/",
-    // },
-    // {
-    //   id: 6,
-    //   title: "HOME",
-    //   link: "/",
-    // },
   ];
   const page = pages.map((el, inx) => (
     <Link key={inx} href={el.link}>

@@ -11,10 +11,14 @@
 .header_top button {
   background: inherit;
 }
+.header-top select:focus {
+  border: 0 !important;
+}
 .top_icons {
   display: flex;
   align-items: center;
   gap: 36px;
+  transition: 0.3s lineato;
 }
 .top_icons span {
   display: flex;
@@ -63,13 +67,24 @@
 .wishlist_count {
   right: 17px;
 }
-@media (max-width: 600px) {
+@media (max-width: 700px) {
   .top_icons p,
   .top_icons h4 {
     display: none;
   }
   .top_contents {
     padding: 16px 0 12px;
+  }
+  .top_icons {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 16px;
+    border: 1px solid #ccc;
+    background: #fff;
+    justify-content: space-evenly;
+    z-index: 100;
   }
 }
 @media (max-width: 440px) {

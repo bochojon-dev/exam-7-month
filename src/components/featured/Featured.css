@@ -81,7 +81,7 @@
   color: #262626;
   opacity: 0.35;
 }
-@media (max-width: 13340px) {
+@media (max-width: 1340px) {
   .featured_cards {
     flex-wrap: wrap;
     justify-content: center !important;

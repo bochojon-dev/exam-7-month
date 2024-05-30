@@ -1,3 +1,4 @@
+"use client";
 import Image from "next/image";
 import React from "react";
 import "../header-top/HeaderTop.css";
@@ -5,8 +6,13 @@ import account from "@/assets/account.svg";
 import wishlist from "@/assets/wishlist.svg";
 import cart from "@/assets/cart.svg";
 import search from "@/assets/search.svg";
+import Link from "next/link";
+import { useSelector } from "react-redux";
 
 const HeaderTop = () => {
+  let data = useSelector((s) => s.cart.value);
+  let wishes = useSelector((s) => s.wishes.value);
+
   return (
     <div className="header_top">
       <div className="container">
@@ -17,24 +23,30 @@ const HeaderTop = () => {
               <option value="RU">RU</option>
               <option value="UZ">UZ</option>
             </select>
-            <select name="CURRENCY">
+            <select name="currency">
               <option value="USD">USD</option>
               <option value="RUB">RUB</option>
               <option value="UZS">UZS</option>
             </select>
           </div>
           <div className="top_icons">
-            <button>
-              <Image width={24} height={24} alt="account" src={account} />
-            </button>
-            <button className="top_icon">
-              <Image width={24} height={24} alt="wishlist" src={wishlist} />
-              <sup>2</sup>
-            </button>
-            <button className="top_icon">
-              <Image width={24} height={24} alt="cart" src={cart} />
-              <sup>3</sup>
-            </button>
+            <Link href={"/login"}>
+              <button>
+                <Image width={24} height={24} alt="account" src={account} />
+              </button>
+            </Link>
+            <Link href={"/wishes"}>
+              <button className="top_icon">
+                <Image width={24} height={24} alt="wishlist" src={wishlist} />
+                <sup>{wishes.length}</sup>
+              </button>
+            </Link>
+            <Link href={"/cart"}>
+              <button className="top_icon">
+                <Image width={24} height={24} alt="cart" src={cart} />
+                <sup>{data.length}</sup>
+              </button>
+            </Link>
             <h4>Items</h4>
             <span>
               <p>$0.00</p>
